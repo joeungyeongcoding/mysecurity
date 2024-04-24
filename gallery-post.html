@@ -38,10 +38,10 @@
         </div>
         <nav>
            <ul class="main-nav mt-5">
-            <li><a href="about.html">about me</a></li>
-            <li><a href="gallery.html">my gallery</a></li>
-              <li><a href="깃허브링크">my project</a></li>
-              <li><a href="youtube.html">youtube link</a></li>
+              <li><a href="about.html">about me</a></li>
+              <li><a href="gallery.html">my gallery</a></li>
+              <li><a href="#">my vod</a></li>
+              <li><a href="#">youtube link</a></li>
               <li><a href="#">contact me</a></li>    
            </ul>
         </nav>
@@ -57,46 +57,45 @@
     </header>
     <div class="wrapper">
 
-        <div class="main">
+        <div class="main" id="gallery-post">
             <div class="container-fluid">
                 <div class="row">
-                <h1 class="mb-5">My Youtube Link</h1>
-                  <!--loop-->
-                    <div class="col-md-4 mb-4">
-                        <a href="#" data-id="DPg8wNTLQPg" class="card-youtube border d-block">  
-                            <img src="https://i1.ytimg.com/vi/DPg8wNTLQPg/hqdefault.jpg" class="img-fluid" alt="YouTube video player"/>  
-                            <h5 class="p-3">작은 도시 순천이 이렇게 아름답냐?</h5>
-                        </a> 
-                    </div>
-
-
-                    <div class="col-md-4 mb-4">
-                        <a href="#" data-id="aCkI0tjzUbQ" class="card-youtube border d-block">  
-                            <img src="https://i1.ytimg.com/vi/aCkI0tjzUbQ/hqdefault.jpg" class="img-fluid" alt="YouTube video player"/>  
-                            <h5 class="p-3">작은 도시 순천이 이렇게 아름답냐?</h5>
-                        </a> 
-                    </div>
-
-
-                    <div class="col-md-4 mb-4">
-                        <a href="#" data-id="OSPokZYFPtw" class="card-youtube border d-block">  
-                            <img src="https://i1.ytimg.com/vi/OSPokZYFPtw/hqdefault.jpg" class="img-fluid" alt="YouTube video player"/>  
-                            <h5 class="p-3">작은 도시 순천이 이렇게 아름답냐?</h5>
-                        </a> 
-                    </div>
-
-
-                    <div class="col-md-4 mb-4">
-                        <a href="#" data-id="K7X8VBtQLGs" class="card-youtube border d-block">  
-                            <img src="https://i1.ytimg.com/vi/K7X8VBtQLGs/hqdefault.jpg" class="img-fluid" alt="YouTube video player"/>  
-                            <h5 class="p-3">작은 도시 순천이 이렇게 아름답냐?</h5>
-                        </a> 
-                    </div>
-                    
-                   <!--/loop--> 
-
-                </div>                 
-            </div>
+                   <div class="col-md-12 col-12">
+                    <!--loop-->
+                       <div class="post-card">
+                           <div class="post-card-img">
+                               <img src="res/images/sport01.jpg" alt="sport01" class="img-fluid">
+                           </div>
+                           <div class="post-card-body">
+                               <p class="post-card-title py-2">
+                                   TRAVEL
+                               </p>
+                               <h3 class="pb-3 mb-4 border-bottom">이번 프랑스 여행중에 찍은 엄청난 사진1</h3>
+                               <div class="body-text">
+                                <div class="datebox text-end pb-5">
+                                    <span class="fst-italic me-4">2024.04.24</span>
+                                    <span class="comment"><i class="ri-message-3-line"></i> 2</span>
+                                </div>
+                                <p>모든 국민은 학문과 예술의 자유를 가진다. 공개하지 아니한 회의내용의 공표에 관하여는 법률이 정하는 바에 의한다. 국회의원의 선거구와 비례대표제 기타 선거에 관한 사항은 법률로 정한다.</p>
+                                <p>국회의 회의는 공개한다. 다만, 출석의원 과반수의 찬성이 있거나 의장이 국가의 안전보장을 위하여 필요하다고 인정할 때에는 공개하지 아니할 수 있다.</p>
+                               </div>
+                           </div>
+                           <div class="post-card-footer">
+                                <h5>Tags In</h5>
+                                <a href="#">제주도</a>
+                                <a href="#">야구</a>
+                                <a href="#">국가대표</a>
+                                <a href="#">뛰어다니기</a>
+                           </div>
+                           <div class="paging text-end">
+                                <a href="#" class="prev"><i class="fa-solid fa-angle-left"></i></a>
+                                <a href="#" class="next"><i class="fa-solid fa-angle-right"></i></a>
+                           </div>
+                       </div>
+                 <!-- /loop-->  
+                   </div> 
+                </div> 
+            </div>    
         </div>
         
         
@@ -161,12 +160,9 @@
         </aside>
     </div>
 
-
-    <div class="youtube-popup">
+    <div class="zoombox">
         <div class="close"><i class="fa-solid fa-xmark"></i></div>
-        <div class="youtube-body">
-            
-        </div>
+        <div class="zoombody"></div>
     </div>
 </body>
 </html>
