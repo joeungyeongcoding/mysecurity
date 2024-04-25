@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>네이버에디터 테스트</title>
+</head>
+<body>
+    <form name="myform" onsubmit="return chkSubmit();">
+        <div>
+            <textarea name="content" id="demo" cols="100" rows="10"></textarea>
+        </div>
+        <div><button type="submit">전송</button></div>
+        <script src="res/editor/js/service/HuskyEZCreator.js" charset="utf-8"></script>
+        <script>
+            var oEditors = [];
+            nhn.husky.EZCreator.createInIFrame({
+            oAppRef: oEditors,
+            elPlaceHolder: "demo",
+            sSkinURI: "res/editor/SmartEditor2Skin.html",
+            fCreator: "createSEditor2",
+            fOnAppLoad : function(){
+                oEditors.getById['demo'].setDefaultFont("나눔고딕", 12);
+            }
+            }); 
+
+            function chkSubmit(eClickedobj){
+
+                //에디어 내용이 textarea에 적용
+                oEditors.getById["demo"].exec("UPDATE_CONTENTS_FIELD", []);
+
+                //여기서 검증
+                if(document.getElementById("demo").value == "<p><br></p>"){
+                    alert("내용을 입력하세요.");
+                    document.getElementById("demo").value="";
+                    return false;
+                }else {
+                    console.log(document.getElementById("demo").value);
+                    return false;
+                }
+            } 
+        </script>
+
+    </form>
+</body>
+</html>
